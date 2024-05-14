@@ -24,4 +24,4 @@ $accounts_to_be_checked =
        Where-Object ServiceName -notmatch '\$|krbtgt' |    
        Where-Object TicketEncryptionType -in ('0x17','0x18')
 
-$accounts_to_be_checked | Select-Object TimeCreated, TimeGenerated, Id, ProviderName, Status, TicketEncryptionType, ServiceName, TicketOptions, IpAddress
+$accounts_to_be_checked | Select-Object TimeCreated, TimeGenerated, Id, ProviderName, Status, TicketEncryptionType, ServiceName, TicketOptions, Username, IpAddress
