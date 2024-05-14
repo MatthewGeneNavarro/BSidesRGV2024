@@ -4,10 +4,10 @@ $events_4768 = .\golden_ticket_attack\events_4768.ps1 | Select-Object Id, Accoun
 $events_4672 = .\golden_ticket_attack\events_4672.ps1 | Select-Object Id, AccountInformation
 $events_4624 = .\golden_ticket_attack\events_4624.ps1 | Select-Object Id, AccountInformation
 
-# Find the matching account information
+# Checked account status and priviledge
 $checkedAccounts = $events_4769
 
-foreach ($account in $matchingAccounts) {
+foreach ($account in $checkedAccounts) {
     if ($account.AccountInformation -notin $events_4768.AccountInformation) {
         $accountStatus = "Golden ticket attack"
     }
