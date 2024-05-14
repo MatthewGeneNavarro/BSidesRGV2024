@@ -1,5 +1,5 @@
 ﻿# Retrieve eventdata from the EVTX file
-$events = Get-WinEvent -Path .\kerberos_attack\event4769_log.evtx | Where-Object { $_.Id -eq 4769} | Select-Object *
+$events = Get-WinEvent -Path .\event4769_log.evtx | Where-Object { $_.Id -eq 4769} | Select-Object *
 
 # Iterate through each event and parse the Message property to extract Ticket Encryption Type
 foreach ($event in $events) {
