@@ -6,12 +6,14 @@ Golden Ticket Detection
 Important Event IDs:
 4624: Account Logon
 4672: Admin Logon
-Get-WinEvent -FilterHashTable @{Logname='Security';ID=4672} -MaxEvents 1 | Format-List -Property *
+4678: TGT Request
+4769: TGS Request
 
-Silver Ticket Detection
+Kerberoasting Detection
 Important Event IDs:
 4624: Account Logon
-4634: Account Logoff
 4672: Admin Logon
-Get-WinEvent -FilterHashTable @{Logname='Security';ID=4672} -MaxEvents 1 | Format-List -Property *
+4678: TGT Request
+4769: TGS Request
+
 
