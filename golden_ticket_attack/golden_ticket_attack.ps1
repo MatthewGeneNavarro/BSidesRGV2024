@@ -9,7 +9,7 @@ $checkedAccounts = $events_4769
 
 foreach ($account in $checkedAccounts) {
     if ($account.AccountInformation -notin $events_4768.AccountInformation) {
-        $accountStatus = "Golden ticket attack"
+        $accountStatus = "Golden ticket attack: Missing TGT Request"
     }
     else {
         if ($account.AccountInformation -in $events_4624.AccountInformation) {
