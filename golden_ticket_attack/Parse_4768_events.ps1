@@ -1,5 +1,5 @@
 ﻿# Retrieve eventdata from the EVTX file
-$events_4768 = Get-WinEvent -Path .\logs\low_priv_user_gold_ticket.evtx | Where-Object { $_.Id -in 4768} | Select-Object *
+$events_4768 = Get-WinEvent -Path '..\logs\low_priv_user_gold_ticket.evtx' | Where-Object { $_.Id -in 4768} | Select-Object *
 
 # Iterate through each event and parse the Message property to extract Ticket Encryption Type
 foreach ($event in $events_4768) {

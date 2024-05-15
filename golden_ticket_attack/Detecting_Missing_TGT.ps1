@@ -1,10 +1,10 @@
 ﻿# Retrieve eventdata from the EVTX file
-$events_4769 = .\golden_ticket_attack\events_4769.ps1 | Select-Object Id, AccountInformation
-$events_4768 = .\golden_ticket_attack\events_4768.ps1 | Select-Object Id, AccountInformation
-$events_4672 = .\golden_ticket_attack\events_4672.ps1 | Select-Object Id, AccountInformation
-$events_4624 = .\golden_ticket_attack\events_4624.ps1 | Select-Object Id, AccountInformation
+$events_4769 = .\Parse_4769_events.ps1 | Select-Object Id, AccountInformation
+$events_4768 = .\Parse_4768_events.ps1| Select-Object Id, AccountInformation
+$events_4672 = .\Parse_4672_events.ps1 | Select-Object Id, AccountInformation
+$events_4624 = .\Parse_4624_events.ps1| Select-Object Id, AccountInformation
 
-# Checked account status and priviledge
+# Check account status and privileges
 $checkedAccounts = $events_4769
 
 foreach ($account in $checkedAccounts) {
