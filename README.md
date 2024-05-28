@@ -1,5 +1,5 @@
-# Blue-PowerShell-Scripts
-A Collection of Powershell One-Liners and functions that can help Blue
+# BSidesRGV2024
+I did a presention on Kerberos attack and how by learning what is normal in the Kerberos protocol allows for defenders to write scripts detection abnormal behavior
 
 
 Golden Ticket Detection
